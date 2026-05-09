@@ -87,8 +87,4 @@ describe('Validation & Edge Cases', function() {
   it('should throw an error for an empty input', function() {
      expect(() => romanToInteger('')).to.throw("Input must be a valid Roman numeral.");
   });
-
-  // it('should throw an error for invalid characters', function() {
-  //   expect(() => integerToRoman(null)).to.throw("Please enter a valid integer number.");
-  // });
 });
