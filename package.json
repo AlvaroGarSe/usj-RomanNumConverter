@@ -1,21 +1,17 @@
 {
-  "name": "usj-romannumconverter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "name": "roman-converter",
+  "version": "1.0.2",
+  "description": "Roman numeral converter website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:headless": "node run-tests.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlvaroGarSe/usj-RomanNumConverter.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/AlvaroGarSe/usj-RomanNumConverter/issues"
-  },
-  "homepage": "https://github.com/AlvaroGarSe/usj-RomanNumConverter#readme"
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "http-server": "^14.1.1",
+    "mocha": "^11.1.0",
+    "mocha-chrome": "^2.2.0",
+    "mocha-headless-chrome": "^4.0.0",
+    "puppeteer": "^19.7.5",
+    "eslint": "^9.0"
+  }
 }
