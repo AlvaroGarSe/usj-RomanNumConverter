@@ -113,6 +113,9 @@ function handleConversion() {
   const resultDiv = document.getElementById('result');
   const errorDiv = document.getElementById('error');
 
+  // Event for Google Analytics whenever the convert funcion is called
+  gtag('event', 'convert_click', { conversion_mode: mode});
+  
   // Clear any previous result or error messages.
   resultDiv.textContent = '';
   errorDiv.textContent = '';
@@ -126,15 +129,30 @@ function handleConversion() {
       }
       // Convert the integer to a Roman numeral.
       const roman = integerToRoman(num);
+
       resultDiv.textContent = `Roman Numeral: ${roman}`;
     } else if (mode === 'romanToInt') {
       // Convert the Roman numeral to an integer.
       const num = romanToInteger(input);
+      
       resultDiv.textContent = `Integer: ${num}`;
     }
+
+    // Event for Google Analytics whenever the input is valid
+      gtag('event', 'conversion_success', {
+        input_value: input,
+        conversion_mode: mode
+      });
+    
   } catch (error) {
     // Display any error messages encountered during conversion.
     errorDiv.textContent = error.message;
+
+    // Event for Google Analytics whenever the input is invalid
+    gtag('event', 'invalid_input', {
+      input_value: input,
+      conversion_mode: mode
+    });
   }
 }
 
