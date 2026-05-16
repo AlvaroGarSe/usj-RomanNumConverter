@@ -139,10 +139,10 @@ function handleConversion() {
     }
 
     // Event for Google Analytics whenever the input is valid
-      gtag('event', 'conversion_success', {
-        input_value: input,
-        conversion_mode: mode
-      });
+    gtag('event', 'conversion_success', {
+      input_value: input,
+      conversion_mode: mode
+    });
     
   } catch (error) {
     // Display any error messages encountered during conversion.
